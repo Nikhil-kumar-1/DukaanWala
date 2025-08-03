@@ -1,6 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { FaUser, FaHeart, FaShoppingBag, FaSearch } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaUser, FaHeart, FaShoppingBag, FaSearch } from "react-icons/fa";
 
 const MainHeader = () => {
   return (
@@ -8,13 +8,13 @@ const MainHeader = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img 
-            src="Logo.png" 
-            alt="Grabit" 
-            className="h-12 md:h-16 w-auto" 
+          <img
+            src="Logo.png"
+            alt="DukaanWala"
+            className="h-12 md:h-16 w-auto"
             onError={(e) => {
-              e.target.onerror = null; 
-              e.target.src = "https://via.placeholder.com/150?text=Grabit+Logo";
+              e.target.onerror = null;
+              e.target.src = "Logo.png";
             }}
           />
         </Link>
@@ -36,22 +36,35 @@ const MainHeader = () => {
         {/* Account, Wishlist, Cart */}
         <div className="flex items-center gap-4 md:gap-6 text-sm">
           {/* Account */}
-          <Link to="/login" className="flex flex-col items-center text-gray-700 hover:text-green-600 transition-colors">
+          <Link
+            to="/login"
+            className="flex flex-col items-center text-gray-700 hover:text-green-600 transition-colors"
+          >
             <FaUser className="text-xl" />
             <span className="text-xs mt-1 hidden md:block">Account</span>
           </Link>
 
           {/* Wishlist */}
-          <Link to="/wishlist" className="flex flex-col items-center text-gray-700 hover:text-green-600 transition-colors relative">
+          <Link
+            to="/wishlist"
+            className="flex flex-col items-center text-gray-700 hover:text-green-600 transition-colors relative"
+          >
             <FaHeart className="text-xl" />
-            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              3
+            </span>
             <span className="text-xs mt-1 hidden md:block">Wishlist</span>
           </Link>
 
           {/* Cart */}
-          <Link to="/cart" className="flex flex-col items-center text-gray-700 hover:text-green-600 transition-colors relative">
+          <Link
+            to="/cart"
+            className="flex flex-col items-center text-gray-700 hover:text-green-600 transition-colors relative"
+          >
             <FaShoppingBag className="text-xl" />
-            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+            <span className="absolute -top-2 -right-2 bg-green-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
+              3
+            </span>
             <span className="text-xs mt-1 hidden md:block">Cart</span>
           </Link>
         </div>
